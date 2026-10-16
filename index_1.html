@@ -1,0 +1,1170 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="목운중학교 16기 학생회 보이는 라디오쇼 보라FM 사연 접수. 10.19(월)~11.3(화), 영상·음성·손글씨·글 모두 OK.">
+<meta property="og:title" content="목운 보라FM 사연 접수">
+<meta property="og:description" content="11.18 보이는 라디오쇼! 고민, 전하지 못한 말, 친구 자랑, 목운의 추억을 보내 주세요.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#6A3BE0">
+<title>목운 보라FM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&amp;family=Nanum+Pen+Script&amp;family=Noto+Sans+KR:wght@500;700;900&amp;display=swap">
+<style>
+/* Layout: 포스터를 그대로 이어 붙인 세로 한 장 — 보라 점무늬 바탕 위에 잉크 테두리 카드를 쌓고, PC에서는 카드 안을 2열로 펼침 */
+:root{
+  --purple:#6A3BE0;
+  --purple-dot:#7A50EA;
+  --night:#2B1966;
+  --ink:#17112E;
+  --yellow:#FFE14D;
+  --yellow-deep:#FFD21F;
+  --pink:#FF7EB8;
+  --mint:#8FEBCB;
+  --sky:#AAD4FF;
+  --coral:#FF5A5A;
+  --white:#FFFFFF;
+  --paper:#F6F2FF;
+  --muted:#5A5275;
+  --body-ink:#3A3155;
+  --danger:#C8102E;
+  --danger-bg:#FFF0F2;
+  --note-bg:#FFF7C2;
+  --scrim:rgba(23,17,46,.74);
+  --f-display:'Black Han Sans','Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  --f-body:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  --f-hand:'Nanum Pen Script','Noto Sans KR',cursive;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+img{max-width:100%}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background-color:var(--purple);
+  background-image:radial-gradient(var(--purple-dot) 1.5px, transparent 1.7px);
+  background-size:22px 22px;
+  color:var(--white);
+  font-family:var(--f-body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-text-size-adjust:100%;
+}
+.page{overflow-x:hidden}
+.wrap{
+  max-width:1120px;
+  margin:0 auto;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));
+  padding-right:max(16px, env(safe-area-inset-right, 0px));
+}
+h1,h2,h3{text-wrap:balance}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.light :focus-visible{outline-color:var(--purple)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ticker */
+.ticker{background:var(--ink);color:var(--yellow);overflow:hidden}
+.ticker-track{display:flex;width:max-content;animation:tick 32s linear infinite}
+.ticker-group{display:flex;align-items:center;gap:26px;padding:12px 26px 12px 0;font-family:var(--f-display);font-size:clamp(16px,2vw,22px);white-space:nowrap}
+.ticker-group i{flex:none;width:16px;height:16px;border-radius:50%;background:var(--coral)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:56px;padding:0 28px;
+  border:3px solid var(--ink);border-radius:999px;
+  background:var(--yellow);color:var(--ink);
+  font-family:var(--f-display);font-size:20px;line-height:1;
+  box-shadow:5px 5px 0 var(--ink);text-decoration:none;cursor:pointer;
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ink)}
+.btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}
+.btn[disabled]{opacity:.55;cursor:not-allowed;transform:none;box-shadow:5px 5px 0 var(--ink)}
+.btn.ghost{background:var(--white)}
+.btn.big{min-height:64px;font-size:24px;padding:0 36px}
+
+/* hero */
+.hero{padding-block:26px 10px;overflow:hidden}
+.hero-top{display:flex;justify-content:space-between;gap:6px 16px;flex-wrap:wrap;font-weight:900;font-size:clamp(15px,1.8vw,20px);margin-bottom:16px}
+.hero-top .school{color:var(--yellow)}
+.panel{
+  position:relative;background:var(--night);
+  border:4px solid var(--ink);border-radius:32px;box-shadow:10px 10px 0 var(--ink);
+  padding:clamp(22px,4vw,44px) clamp(18px,5vw,64px) clamp(26px,4vw,48px);
+  text-align:center;
+}
+.corner{position:absolute;width:44px;height:44px;border:4px solid var(--white)}
+.c-tl{top:20px;left:20px;border-right:0;border-bottom:0}
+.c-tr{top:20px;right:20px;border-left:0;border-bottom:0}
+.c-bl{bottom:20px;left:20px;border-right:0;border-top:0}
+.c-br{bottom:20px;right:20px;border-left:0;border-top:0}
+.panel-bar{position:relative;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:4px clamp(16px,3vw,40px) 0}
+.onair{display:inline-flex;align-items:center;gap:8px;background:var(--coral);color:var(--white);border:3px solid var(--ink);border-radius:999px;padding:5px 16px;font-weight:900;font-size:clamp(14px,1.8vw,20px);letter-spacing:.02em}
+.onair::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--white);animation:blink 1.4s steps(2,start) infinite}
+@keyframes blink{50%{opacity:.15}}
+.live{font-weight:900;letter-spacing:.06em;font-size:clamp(14px,1.8vw,22px)}
+.logo-block{margin:clamp(12px,2vw,18px) 0 0;display:flex;flex-direction:column;align-items:center;gap:2px;font-weight:400}
+.kicker{font-family:var(--f-display);font-size:clamp(34px,5vw,62px);line-height:1;color:var(--paper);text-shadow:4px 4px 0 var(--ink)}
+.logo{font-family:var(--f-display);font-size:clamp(76px,15vw,196px);line-height:1;color:var(--yellow);text-shadow:clamp(5px,.8vw,10px) clamp(5px,.8vw,10px) 0 var(--ink);letter-spacing:-.01em}
+.sub{font-family:var(--f-display);font-size:clamp(30px,4.8vw,60px);line-height:1.15;color:var(--white);margin-top:14px;text-shadow:3px 3px 0 var(--ink)}
+.sub .dot{position:relative;color:var(--pink)}
+.sub .dot::before{content:"";position:absolute;left:50%;top:-.3em;width:.24em;height:.24em;margin-left:-.12em;border-radius:50%;background:var(--white);border:3px solid var(--ink);box-sizing:border-box}
+.dial-row{display:flex;align-items:flex-end;justify-content:center;gap:clamp(18px,4vw,56px);margin-top:clamp(24px,4vw,40px);flex-wrap:wrap}
+.dial{position:relative;flex:1 1 300px;max-width:620px;height:66px}
+.dial-scale{
+  position:absolute;left:0;right:0;top:12px;height:24px;
+  border-bottom:3px solid var(--white);
+  background-image:linear-gradient(90deg, var(--white) 0 2px, transparent 2px);
+  background-size:5% 11px;background-repeat:repeat-x;background-position:0 100%;
+}
+.major{position:absolute;bottom:0;width:3px;height:24px;margin-left:-1px;background:var(--white)}
+.dial-label{position:absolute;top:44px;transform:translateX(-50%);font-size:13px;font-weight:700;color:var(--paper);font-variant-numeric:tabular-nums}
+.needle{position:absolute;left:50%;top:2px;width:4px;height:36px;margin-left:-1px;background:var(--coral);border-radius:2px}
+.needle::before{content:"";position:absolute;left:50%;top:-6px;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--coral)}
+.bigdate{font-family:var(--f-display);font-size:clamp(66px,9vw,124px);line-height:.9;color:var(--pink);text-shadow:6px 6px 0 var(--ink);font-variant-numeric:tabular-nums}
+.sticker{
+  position:absolute;right:-26px;top:42%;
+  width:184px;height:184px;border-radius:50%;
+  background:var(--mint);color:var(--ink);
+  border:4px solid var(--ink);box-shadow:6px 6px 0 var(--ink);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  transform:rotate(10deg);font-weight:700;font-size:16px;line-height:1.3;text-align:center;
+}
+.sticker b{font-family:var(--f-display);font-weight:400;font-size:27px;line-height:1.2}
+
+/* status */
+.status{padding-block:30px 6px}
+.status-card{
+  display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;
+  background:var(--white);color:var(--ink);
+  border:4px solid var(--ink);border-radius:26px;box-shadow:8px 8px 0 var(--ink);
+  padding:20px clamp(18px,3vw,32px);
+}
+.period-group{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+.tag-black{background:var(--ink);color:var(--white);border-radius:10px;padding:5px 12px;font-weight:900;font-size:15px}
+.period{font-family:var(--f-display);font-size:clamp(26px,3.6vw,44px);color:var(--purple);line-height:1.1}
+.period .dow{font-family:var(--f-body);font-weight:900;font-size:.7em;margin-left:2px}
+.state-chip{display:inline-flex;align-items:center;gap:8px;border:3px solid var(--ink);border-radius:999px;padding:6px 16px;font-weight:900;background:var(--pink);color:var(--ink)}
+.state-chip[data-phase="before"]{background:var(--sky)}
+.state-chip[data-phase="closed"]{background:var(--paper)}
+.status-card .btn{margin-left:auto}
+
+/* section heads */
+.sec{padding-block:58px 8px}
+.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px 24px;margin-bottom:26px}
+.sec-title{position:relative;display:inline-block;margin:0;padding-bottom:14px;font-family:var(--f-display);font-weight:400;font-size:clamp(34px,4.6vw,56px);line-height:1.1;text-shadow:3px 3px 0 var(--ink)}
+.sec-title::after{content:"";position:absolute;left:-8px;right:-12px;bottom:0;height:16px;border-bottom:6px solid var(--yellow);border-radius:0 0 50% 50% / 0 0 100% 100%}
+.hand{font-family:var(--f-hand);font-size:clamp(28px,3.2vw,38px);line-height:1.1;transform:rotate(-3deg);display:inline-block}
+.lead{margin:-10px 0 24px;font-weight:700;font-size:clamp(16px,1.7vw,18px);max-width:640px}
+
+/* story cards */
+.story-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
+.story{border:4px solid var(--ink);border-radius:24px;box-shadow:7px 7px 0 var(--ink);padding:20px 24px 22px;color:var(--ink)}
+.story h3{margin:0;font-weight:900;font-size:clamp(24px,2.8vw,32px);line-height:1.25}
+.story p{margin:6px 0 0;font-weight:700;font-size:clamp(16px,1.7vw,19px)}
+.s1{background:var(--mint);transform:rotate(-.6deg)}
+.s2{background:var(--pink);transform:rotate(.8deg)}
+.s3{background:var(--white);transform:rotate(.5deg)}
+.s4{background:var(--sky);transform:rotate(-.7deg)}
+.more{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:10px;margin:28px 0 0;font-weight:900;font-size:clamp(17px,2vw,22px);text-align:center}
+.more .plus{flex:none;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--yellow);color:var(--ink);border:3px solid var(--ink);font-size:20px;line-height:1}
+.more em{font-style:normal;color:var(--yellow)}
+
+/* ribbon */
+.ribbon-sec{padding-block:52px 8px}
+.ribbon{
+  position:relative;display:flex;align-items:center;justify-content:center;
+  min-height:88px;padding:16px 92px;
+  background:var(--coral);border:4px solid var(--ink);border-radius:6px;box-shadow:0 8px 0 var(--ink);
+  transform:rotate(-1.2deg);text-align:center;
+  font-family:var(--f-display);font-size:clamp(21px,3vw,38px);line-height:1.25;color:var(--white);
+}
+.ribbon em{font-style:normal;color:var(--yellow)}
+.badge{position:absolute;top:50%;width:92px;height:92px;margin-top:-46px;border-radius:50%;border:4px solid var(--ink);box-shadow:4px 4px 0 var(--ink);display:flex;align-items:center;justify-content:center}
+.badge.candy{left:-24px;background:var(--yellow)}
+.badge.quiz{right:-24px;background:var(--white);color:var(--coral);font-size:56px;line-height:1}
+.badge svg{width:62%;height:62%}
+
+/* info */
+.info-card{
+  display:grid;gap:28px;
+  background:var(--white);color:var(--ink);
+  border:4px solid var(--ink);border-radius:28px;box-shadow:8px 8px 0 var(--ink);
+  padding:clamp(20px,3.5vw,40px);
+}
+.info-main{display:grid;gap:20px;min-width:0}
+.pills{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.pill{border:3px solid var(--ink);border-radius:999px;padding:5px 18px;font-weight:900;color:var(--ink)}
+.p-mint{background:var(--mint)}.p-pink{background:var(--pink)}.p-sky{background:var(--sky)}.p-yellow{background:var(--yellow)}
+.pills .hand{font-size:30px;margin-left:4px}
+.rules{display:grid;gap:10px;margin:0}
+.rules div{display:grid;grid-template-columns:7.2em minmax(0,1fr);gap:12px;align-items:baseline}
+.rules dt{font-weight:900}
+.rules dt.warn{color:var(--danger)}
+.rules dd{margin:0;font-weight:500;color:var(--body-ink)}
+.rules dd b{color:var(--danger)}
+.format-box{border:3px dashed var(--ink);border-radius:22px;padding:20px 22px;display:grid;gap:14px;align-content:start}
+.format-box h3{margin:0;font-family:var(--f-display);font-weight:400;font-size:24px}
+.format-list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.format-list li{display:grid;grid-template-columns:7.4em minmax(0,1fr);gap:10px;align-items:center;font-weight:700;color:var(--body-ink)}
+.format-list .pill{text-align:center;padding:4px 10px}
+
+/* form */
+.form-card{background:var(--white);color:var(--ink);border:4px solid var(--ink);border-radius:30px;box-shadow:10px 10px 0 var(--ink);overflow:hidden}
+.card-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px 16px;background:var(--night);color:var(--white);border-bottom:4px solid var(--ink);padding:16px clamp(20px,3.5vw,40px)}
+.card-head strong{font-family:var(--f-display);font-weight:400;font-size:clamp(22px,2.6vw,28px)}
+.rec{display:inline-flex;align-items:center;gap:8px;font-weight:900;letter-spacing:.08em;font-size:14px;color:var(--yellow)}
+.rec::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--coral);animation:blink 1.4s steps(2,start) infinite}
+.form-body{padding:clamp(20px,3.5vw,44px);display:grid;gap:30px}
+.demo-note,.closed-box{border:3px dashed var(--ink);border-radius:16px;padding:14px 18px;font-weight:700;background:var(--note-bg)}
+.closed-box{display:grid;gap:8px;text-align:center;padding:30px 20px}
+.closed-box strong{font-family:var(--f-display);font-weight:400;font-size:clamp(24px,3vw,34px)}
+form{display:grid;gap:38px}
+.step{border:0;margin:0;padding:0;min-width:0}
+.step-title{display:flex;align-items:center;gap:12px;padding:0;margin-bottom:18px;font-family:var(--f-display);font-size:clamp(22px,2.6vw,28px);line-height:1.2}
+.step-num{flex:none;display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:50%;background:var(--purple);color:var(--white);border:3px solid var(--ink);font-size:20px}
+.step-body{display:grid;gap:22px}
+.row{display:grid;gap:22px}
+.field{display:grid;gap:8px;min-width:0}
+.label{font-weight:900;font-size:16px}
+.label .opt{font-weight:500;color:var(--muted);font-size:14px;margin-left:6px}
+.label .must{display:inline-block;margin-left:6px;padding:0 8px;border-radius:999px;background:var(--coral);color:var(--white);font-size:12px;line-height:20px;vertical-align:2px}
+.input{
+  width:100%;min-height:54px;border:3px solid var(--ink);border-radius:14px;
+  background:var(--paper);color:var(--ink);padding:12px 16px;font:inherit;font-size:16px;
+}
+.input::placeholder{color:#7E7799}
+.input:focus{background:var(--white)}
+textarea.input{min-height:200px;resize:vertical;line-height:1.75}
+.input[aria-invalid="true"]{border-color:var(--danger);background:var(--danger-bg)}
+.hint{margin:0;color:var(--muted);font-size:14px;font-weight:500}
+.err{margin:0;color:var(--danger);font-weight:700;font-size:14px}
+.counter{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:14px;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums}
+.counter.over{color:var(--danger)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{position:relative;display:inline-flex}
+.chip input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.chip span{
+  display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 18px;
+  border:3px solid var(--ink);border-radius:999px;background:var(--white);color:var(--ink);
+  font-weight:700;cursor:pointer;user-select:none;transition:transform .1s ease, box-shadow .1s ease;
+}
+.chip span::before{content:"";flex:none;width:12px;height:12px;border-radius:50%;border:2px solid var(--ink);background:var(--white)}
+.chip input[type="checkbox"] + span::before{border-radius:3px}
+.chip input:checked + span{background:var(--c, var(--yellow));font-weight:900;box-shadow:4px 4px 0 var(--ink);transform:translate(-2px,-2px)}
+.chip input:checked + span::before{background:var(--ink)}
+.chip input:focus-visible + span{outline:3px solid var(--purple);outline-offset:3px}
+.chips[aria-invalid="true"] .chip span{border-color:var(--danger)}
+.drop{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  min-height:180px;padding:22px;border:3px dashed var(--ink);border-radius:20px;background:var(--paper);
+  text-align:center;cursor:pointer;transition:background .15s ease;
+}
+.drop:hover,.drop.is-over{background:var(--note-bg)}
+.drop:focus-within{outline:3px solid var(--purple);outline-offset:3px}
+.drop[aria-invalid="true"]{border-color:var(--danger);background:var(--danger-bg)}
+.drop-icon{display:inline-flex;align-items:center;justify-content:center;width:58px;height:58px;border-radius:50%;background:var(--purple);color:var(--white);border:3px solid var(--ink)}
+.drop strong{font-size:18px;font-weight:900}
+.files{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.files li{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px;align-items:center;border:3px solid var(--ink);border-radius:14px;padding:8px 8px 8px 12px;background:var(--white)}
+.fkind{display:inline-flex;align-items:center;justify-content:center;min-width:48px;height:32px;padding:0 8px;border:2px solid var(--ink);border-radius:8px;font-size:13px;font-weight:900}
+.fname{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}
+.fsize{display:block;font-size:13px;font-weight:500;color:var(--muted);font-variant-numeric:tabular-nums}
+.fstate{color:#0B7A55;font-weight:900}
+.fremove{width:44px;height:44px;border:2px solid var(--ink);border-radius:12px;background:var(--white);color:var(--ink);font:inherit;font-weight:900;font-size:20px;cursor:pointer}
+.fremove:hover{background:var(--danger-bg)}
+.consent{display:grid;gap:14px}
+.check{display:flex;gap:12px;align-items:flex-start;font-weight:700;cursor:pointer}
+.check input{flex:none;width:24px;height:24px;margin:1px 0 0;accent-color:var(--purple)}
+.terms{border:2px solid var(--ink);border-radius:14px;background:var(--paper)}
+.terms summary{cursor:pointer;padding:12px 16px;font-weight:700;font-size:15px;min-height:44px}
+.terms dl{margin:0;padding:0 16px 14px;display:grid;gap:8px;font-size:14px}
+.terms dl div{display:grid;grid-template-columns:6.4em minmax(0,1fr);gap:10px}
+.terms dt{font-weight:900}.terms dd{margin:0;color:var(--body-ink)}
+.form-alert{border:3px solid var(--danger);border-radius:14px;background:var(--danger-bg);color:var(--danger);padding:12px 16px;font-weight:700}
+.submit-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
+.submit-row .hint{flex:1 1 220px}
+.done{display:grid;justify-items:center;gap:18px;text-align:center;padding-block:12px}
+.ticket{position:relative;width:100%;max-width:440px;background:var(--yellow);border:4px solid var(--ink);border-radius:22px;box-shadow:7px 7px 0 var(--ink);padding:24px 22px;display:grid;gap:6px}
+.ticket::before,.ticket::after{content:"";position:absolute;top:50%;width:28px;height:28px;margin-top:-14px;border-radius:50%;background:var(--white);border:4px solid var(--ink)}
+.ticket::before{left:-16px;clip-path:inset(0 0 0 50%)}
+.ticket::after{right:-16px;clip-path:inset(0 50% 0 0)}
+.ticket small{font-weight:900;letter-spacing:.06em}
+.receipt{font-family:var(--f-display);font-size:clamp(34px,6vw,48px);line-height:1.1;letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.done h3{margin:0;font-family:var(--f-display);font-weight:400;font-size:clamp(30px,4vw,42px)}
+.done p{margin:0;max-width:460px;font-weight:700;color:var(--body-ink)}
+
+/* overlay */
+.overlay{
+  position:fixed;inset:0;z-index:50;background:var(--scrim);
+  display:flex;align-items:center;justify-content:center;
+  padding:max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px));
+}
+.ov-card{width:100%;max-width:480px;background:var(--white);color:var(--ink);border:4px solid var(--ink);border-radius:26px;box-shadow:8px 8px 0 var(--ink);padding:26px;display:grid;gap:16px}
+.ov-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.ov-title{margin:0;font-family:var(--f-display);font-weight:400;font-size:26px}
+.ov-pct{font-family:var(--f-display);font-size:34px;color:var(--purple);font-variant-numeric:tabular-nums}
+.bar{height:24px;border:3px solid var(--ink);border-radius:999px;background:var(--paper);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:repeating-linear-gradient(45deg,var(--yellow) 0 14px,var(--yellow-deep) 14px 28px);transition:width .3s ease}
+.ov-line{margin:0;font-weight:700;overflow-wrap:anywhere}
+.ov-sub{margin:0;color:var(--muted);font-size:14px;font-weight:500;font-variant-numeric:tabular-nums}
+.ov-note{margin:0;border-radius:12px;background:var(--note-bg);padding:10px 14px;font-size:14px;font-weight:700}
+.ov-err{margin:0;border-radius:12px;background:var(--danger-bg);color:var(--danger);padding:12px 14px;font-weight:700}
+.ov-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
+.ov-actions .btn{min-height:50px;font-size:18px;padding:0 22px}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;align-items:start}
+.qa{background:var(--white);color:var(--ink);border:3px solid var(--ink);border-radius:20px;box-shadow:5px 5px 0 var(--ink)}
+.qa summary{list-style:none;cursor:pointer;position:relative;padding:18px 62px 18px 20px;min-height:58px;font-weight:900;font-size:17px}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:"+";position:absolute;right:16px;top:50%;margin-top:-16px;width:32px;height:32px;border-radius:50%;background:var(--yellow);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-size:20px;line-height:1}
+.qa[open] summary::after{content:"−"}
+.qa p{margin:0;padding:0 20px 18px;color:var(--body-ink);font-weight:500}
+
+/* footer */
+.foot{padding-block:56px 48px;text-align:center;display:grid;gap:14px;justify-items:center}
+.notice{margin:0;color:var(--yellow);font-weight:900;font-size:clamp(14px,1.6vw,18px)}
+.org{margin:0;font-family:var(--f-display);font-size:clamp(18px,2.2vw,24px);display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 14px}
+.org i{width:9px;height:9px;border-radius:50%;background:var(--yellow)}
+.foot small{font-size:14px;font-weight:700;opacity:.9}
+
+@media (min-width:640px){
+  .row-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:720px){
+  .story-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 34px}
+  .faq-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:900px){
+  .info-card{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:36px}
+}
+@media (max-width:719px){
+  .corner{width:24px;height:24px;border-width:3px}
+  .c-tl,.c-tr{top:12px}.c-bl,.c-br{bottom:12px}
+  .c-tl,.c-bl{left:12px}.c-tr,.c-br{right:12px}
+  .panel{border-radius:26px;box-shadow:7px 7px 0 var(--ink)}
+  .hero{padding-bottom:58px}
+  .dial-row{justify-content:flex-start}
+  .sticker{width:118px;height:118px;top:auto;bottom:-56px;right:6px;font-size:12px;border-width:3px;box-shadow:4px 4px 0 var(--ink)}
+  .sticker b{font-size:17px}
+  .ribbon{padding:14px 52px;min-height:76px}
+  .badge{width:62px;height:62px;margin-top:-31px;border-width:3px}
+  .badge.candy{left:-12px}.badge.quiz{right:-12px;font-size:36px}
+  .status-card .btn{margin-left:0;width:100%}
+  .submit-row .btn{width:100%}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .ticker-track,.onair::before,.rec::before{animation:none}
+  .btn,.chip span,.bar i{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <div class="ticker-group"><i></i><span>ON AIR</span><i></i><span>사연 모집 중</span><i></i><span>목운 보이는 라디오쇼 11.18</span><i></i><span>여러분의 이야기 대환영</span></div>
+    <div class="ticker-group"><i></i><span>ON AIR</span><i></i><span>사연 모집 중</span><i></i><span>목운 보이는 라디오쇼 11.18</span><i></i><span>여러분의 이야기 대환영</span></div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-top"><span>2026 학생독립운동 기념의 날 특집</span><span class="school">목운중학교</span></div>
+    <div class="panel">
+      <span class="corner c-tl" aria-hidden="true"></span><span class="corner c-tr" aria-hidden="true"></span>
+      <span class="corner c-bl" aria-hidden="true"></span><span class="corner c-br" aria-hidden="true"></span>
+      <div class="panel-bar"><span class="onair">ON AIR</span><span class="live">11.18 WED · LIVE</span></div>
+      <h1 class="logo-block">
+        <span class="kicker">목운</span>
+        <span class="logo">보라FM</span>
+        <span class="sub"><span class="dot">보</span>이는 <span class="dot">라</span>디오쇼</span>
+      </h1>
+      <div class="dial-row">
+        <div class="dial" aria-hidden="true">
+          <div class="dial-scale"></div>
+          <span class="major" style="left:10%;top:14px"></span><span class="major" style="left:30%;top:14px"></span><span class="major" style="left:50%;top:14px"></span><span class="major" style="left:70%;top:14px"></span><span class="major" style="left:90%;top:14px"></span>
+          <span class="dial-label" style="left:10%">10.8</span><span class="dial-label" style="left:30%">11.0</span><span class="dial-label" style="left:50%">11.2</span><span class="dial-label" style="left:70%">11.4</span><span class="dial-label" style="left:90%">11.6</span>
+          <span class="needle"></span>
+        </div>
+        <p class="bigdate" style="margin:0"><span class="sr-only">방송일 </span>11.18</p>
+      </div>
+      <p class="sticker" style="margin:0">사연을 보내면<b>소정의 상품</b>드려요!</p>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="status" aria-label="접수 기간">
+  <div class="wrap">
+    <div class="status-card">
+      <div class="period-group">
+        <span class="tag-black">사연 접수</span>
+        <strong class="period">10.19<span class="dow">(월)</span> ~ 11.3<span class="dow">(화)</span></strong>
+      </div>
+      <span class="state-chip" id="stateChip" data-phase="open">마감까지 D-0</span>
+      <a class="btn" href="#send">사연 보내기</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="storiesTitle">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title" id="storiesTitle">이런 사연 기다려요!</h2>
+      <span class="hand">사연과 함께 신청곡도 적어 주세요!</span>
+    </div>
+    <div class="story-grid">
+      <article class="story s1"><h3>고민 상담소</h3><p>연애·학업, 무슨 고민이든 OK!</p></article>
+      <article class="story s2"><h3>전하지 못한 말</h3><p>선생님께, 친구에게 한마디</p></article>
+      <article class="story s3"><h3>우리 반·친구 자랑</h3><p>이런 반, 이런 친구 또 없다</p></article>
+      <article class="story s4"><h3>목운에서의 추억</h3><p>입학 첫날, 축제… 추억 소환</p></article>
+    </div>
+    <p class="more"><span class="plus" aria-hidden="true">+</span><span>이 밖에도 <em>하고 싶은 이야기라면 무엇이든</em> 환영</span></p>
+  </div>
+</section>
+
+<section class="ribbon-sec" aria-label="방송 이벤트">
+  <div class="wrap">
+    <p class="ribbon" style="margin:0">
+      <span class="badge candy" aria-hidden="true"><svg viewBox="0 0 64 40" fill="none"><path d="M18 20 4 9v22z" fill="#FF7EB8" stroke="#17112E" stroke-width="3" stroke-linejoin="round"/><path d="M46 20 60 9v22z" fill="#FF7EB8" stroke="#17112E" stroke-width="3" stroke-linejoin="round"/><ellipse cx="32" cy="20" rx="15" ry="12" fill="#FFFFFF" stroke="#17112E" stroke-width="3"/><path d="M24 11l-4 16M32 8l-4 24M40 10l-4 20" stroke="#FF7EB8" stroke-width="3" stroke-linecap="round"/></svg></span>
+      <span>방송 중 <em>반 추첨 간식 이벤트</em> + 깜짝 퀴즈!</span>
+      <span class="badge quiz" aria-hidden="true">?</span>
+    </p>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="infoTitle">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="sec-title" id="infoTitle">참여 안내</h2></div>
+    <div class="info-card light">
+      <div class="info-main">
+        <div class="period-group"><span class="tag-black">사연 접수</span><strong class="period">10.19<span class="dow">(월)</span> ~ 11.3<span class="dow">(화)</span></strong></div>
+        <div class="pills"><span class="pill p-mint">영상</span><span class="pill p-pink">음성 녹음</span><span class="pill p-sky">손글씨</span><span class="pill p-yellow">글</span><span class="hand">뭐든 다 OK!</span></div>
+        <dl class="rules">
+          <div><dt>참여 대상</dt><dd><b>목운중 학생·선생님 누구나</b> · 개인/팀 모두 가능</dd></div>
+          <div><dt>학번·이름</dt><dd>필수로 적어 주세요 · 팀은 전원 명단 · 방송 중 이름 공개는 선택</dd></div>
+          <div><dt>분량</dt><dd>영상·음성 2~3분 이내, 글 500자 내외</dd></div>
+          <div><dt>유의사항</dt><dd>욕설·비방 등 비교육적인 내용은 받지 않아요</dd></div>
+          <div><dt class="warn">초상권 주의</dt><dd>영상·사진 속 친구에게 꼭 미리 허락을 받아 주세요</dd></div>
+          <div><dt>문의</dt><dd>2층 창의체험부</dd></div>
+        </dl>
+      </div>
+      <aside class="format-box" aria-labelledby="formatTitle">
+        <h3 id="formatTitle">이렇게 보내 주세요</h3>
+        <ul class="format-list">
+          <li><span class="pill p-mint">영상</span><span>2~3분 이내 영상 파일</span></li>
+          <li><span class="pill p-pink">음성 녹음</span><span>휴대폰 녹음 파일 그대로</span></li>
+          <li><span class="pill p-sky">손글씨</span><span>쓴 종이를 사진으로 찍어서</span></li>
+          <li><span class="pill p-yellow">글</span><span>사연 칸에 500자 내외로</span></li>
+        </ul>
+        <p class="hint">파일은 하나에 1GB까지, 최대 5개 올릴 수 있어요.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="send" aria-labelledby="sendTitle">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="sec-title" id="sendTitle">사연 보내기</h2>
+      <span class="hand">로그인 없이 바로 보내요!</span>
+    </div>
+    <div class="form-card light">
+      <div class="card-head"><strong>보라FM 사연 접수 데스크</strong><span class="rec">REC</span></div>
+      <div class="form-body">
+        <p class="demo-note" id="demoNote" hidden>미리보기 화면이에요. 지금은 보내기를 눌러도 사연이 실제로 접수되지 않아요.</p>
+        <div class="closed-box" id="closedBox" hidden>
+          <strong id="closedTitle">접수가 마감됐어요</strong>
+          <span id="closedText">11월 18일 보라FM 방송에서 만나요!</span>
+        </div>
+
+        <form id="sendForm" novalidate>
+          <fieldset class="step">
+            <legend class="step-title"><span class="step-num">1</span>누가 보내나요?</legend>
+            <div class="step-body">
+              <div class="row row-2">
+                <div class="field">
+                  <span class="label" id="lblMode">참여 형태</span>
+                  <div class="chips" role="radiogroup" aria-labelledby="lblMode">
+                    <label class="chip"><input type="radio" name="mode" id="modeSolo" value="개인" checked><span>개인</span></label>
+                    <label class="chip"><input type="radio" name="mode" id="modeTeam" value="팀"><span>팀</span></label>
+                  </div>
+                </div>
+                <div class="field">
+                  <span class="label" id="lblRole">구분</span>
+                  <div class="chips" role="radiogroup" aria-labelledby="lblRole">
+                    <label class="chip"><input type="radio" name="role" id="roleStudent" value="학생" checked><span>학생</span></label>
+                    <label class="chip"><input type="radio" name="role" id="roleTeacher" value="선생님"><span>선생님</span></label>
+                  </div>
+                </div>
+              </div>
+              <div class="row row-2">
+                <div class="field" id="sidField">
+                  <label class="label" for="studentId">학번<span class="must">필수</span></label>
+                  <input class="input" id="studentId" name="studentId" inputmode="numeric" autocomplete="off" maxlength="6" placeholder="예: 30215" aria-describedby="err-studentId">
+                  <p class="err" id="err-studentId" hidden></p>
+                </div>
+                <div class="field">
+                  <label class="label" for="name"><span id="nameLabel">이름</span><span class="must">필수</span></label>
+                  <input class="input" id="name" name="name" autocomplete="name" maxlength="20" placeholder="예: 홍길동" aria-describedby="err-name">
+                  <p class="err" id="err-name" hidden></p>
+                </div>
+              </div>
+              <div class="field" id="membersField" hidden>
+                <label class="label" for="members">팀원 전원 명단<span class="must">필수</span></label>
+                <textarea class="input" id="members" name="members" maxlength="600" style="min-height:120px" placeholder="한 줄에 한 명씩, 학번과 이름을 적어 주세요&#10;30215 홍길동&#10;30302 김목운" aria-describedby="hint-members err-members"></textarea>
+                <p class="hint" id="hint-members">보내는 사람 본인도 포함해 주세요.</p>
+                <p class="err" id="err-members" hidden></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="step">
+            <legend class="step-title"><span class="step-num">2</span>어떤 사연인가요?</legend>
+            <div class="step-body">
+              <div class="field">
+                <span class="label" id="lblCategory">사연 종류<span class="must">필수</span></span>
+                <div class="chips" id="categoryChips" role="radiogroup" aria-labelledby="lblCategory" aria-describedby="err-category">
+                  <label class="chip" style="--c:var(--mint)"><input type="radio" name="category" id="cat1" value="고민 상담소"><span>고민 상담소</span></label>
+                  <label class="chip" style="--c:var(--pink)"><input type="radio" name="category" id="cat2" value="전하지 못한 말"><span>전하지 못한 말</span></label>
+                  <label class="chip" style="--c:var(--paper)"><input type="radio" name="category" id="cat3" value="우리 반·친구 자랑"><span>우리 반·친구 자랑</span></label>
+                  <label class="chip" style="--c:var(--sky)"><input type="radio" name="category" id="cat4" value="목운에서의 추억"><span>목운에서의 추억</span></label>
+                  <label class="chip" style="--c:var(--yellow)"><input type="radio" name="category" id="cat5" value="기타"><span>그 밖의 이야기</span></label>
+                </div>
+                <p class="err" id="err-category" hidden></p>
+              </div>
+              <div class="field">
+                <span class="label" id="lblFormats">보내는 형식<span class="opt">여러 개 골라도 돼요</span></span>
+                <div class="chips" id="formatChips" role="group" aria-labelledby="lblFormats" aria-describedby="err-formats">
+                  <label class="chip" style="--c:var(--mint)"><input type="checkbox" name="formats" id="fmtVideo" value="영상"><span>영상</span></label>
+                  <label class="chip" style="--c:var(--pink)"><input type="checkbox" name="formats" id="fmtVoice" value="음성 녹음"><span>음성 녹음</span></label>
+                  <label class="chip" style="--c:var(--sky)"><input type="checkbox" name="formats" id="fmtHand" value="손글씨"><span>손글씨</span></label>
+                  <label class="chip" style="--c:var(--yellow)"><input type="checkbox" name="formats" id="fmtText" value="글"><span>글</span></label>
+                </div>
+                <p class="err" id="err-formats" hidden></p>
+              </div>
+              <div class="field">
+                <label class="label" for="title">사연 제목<span class="opt">선택</span></label>
+                <input class="input" id="title" name="title" maxlength="60" placeholder="예: 3학년 2반 담임 선생님께">
+              </div>
+              <div class="field">
+                <label class="label" for="story"><span id="storyLabel">사연</span><span class="must" id="storyMust">필수</span><span class="opt" id="storyOpt" hidden>선택</span></label>
+                <textarea class="input" id="story" name="story" maxlength="2000" placeholder="DJ에게 들려주고 싶은 이야기를 적어 주세요" aria-describedby="storyCounter err-story"></textarea>
+                <div class="counter" id="storyCounter"><span id="storyCount">0자</span><span id="storyGuide">글 사연은 500자 내외가 좋아요</span></div>
+                <p class="err" id="err-story" hidden></p>
+              </div>
+              <div class="field">
+                <label class="label" for="song">신청곡<span class="opt">선택</span></label>
+                <input class="input" id="song" name="song" maxlength="80" placeholder="가수 - 노래 제목">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="step">
+            <legend class="step-title"><span class="step-num">3</span>파일 올리기</legend>
+            <div class="step-body">
+              <label class="drop" id="drop" for="fileInput" aria-describedby="err-files">
+                <span class="drop-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4"/><path d="m6 10 6-6 6 6"/><path d="M4 20h16"/></svg></span>
+                <strong>눌러서 파일 고르기</strong>
+                <span class="hint">영상 · 음성 · 손글씨 사진 · 문서 / 파일 하나에 1GB까지, 최대 5개</span>
+                <span class="hint" id="dropReq">영상·음성·손글씨를 골랐다면 파일을 꼭 올려 주세요</span>
+                <input class="sr-only" type="file" id="fileInput" multiple accept="image/*,video/*,audio/*,.heic,.heif,.pdf,.hwp,.hwpx,.doc,.docx,.txt,.m4a,.mp3,.wav,.mov,.mp4">
+              </label>
+              <ul class="files" id="fileList" aria-live="polite"></ul>
+              <p class="err" id="err-files" hidden></p>
+            </div>
+          </fieldset>
+
+          <fieldset class="step">
+            <legend class="step-title"><span class="step-num">4</span>방송 이름과 동의</legend>
+            <div class="step-body">
+              <div class="field">
+                <span class="label" id="lblOnAir">방송에서 이름을 불러도 될까요?<span class="must">필수</span></span>
+                <div class="chips" id="onAirChips" role="radiogroup" aria-labelledby="lblOnAir" aria-describedby="err-onAir">
+                  <label class="chip" style="--c:var(--mint)"><input type="radio" name="onAir" id="onAirYes" value="이름 공개"><span>이름 불러 주세요</span></label>
+                  <label class="chip" style="--c:var(--sky)"><input type="radio" name="onAir" id="onAirNo" value="익명"><span>익명으로 해 주세요</span></label>
+                </div>
+                <p class="err" id="err-onAir" hidden></p>
+              </div>
+              <div class="field" id="nickField" hidden>
+                <label class="label" for="nickname">방송용 닉네임<span class="opt">선택</span></label>
+                <input class="input" id="nickname" name="nickname" maxlength="20" placeholder="예: 3층 창가 자리">
+              </div>
+              <div class="consent">
+                <label class="check"><input type="checkbox" id="agreePrivacy"><span>[필수] 개인정보 수집·이용에 동의해요</span></label>
+                <details class="terms">
+                  <summary>무엇을 왜 모으는지 보기</summary>
+                  <dl>
+                    <div><dt>모으는 항목</dt><dd>학번, 이름, 팀원 명단, 사연 내용, 올린 파일</dd></div>
+                    <div><dt>쓰는 곳</dt><dd>보라FM 방송 사연 선정과 소개, 상품 전달</dd></div>
+                    <div><dt>보관 기간</dt><dd>방송과 상품 전달이 끝나면 지체 없이 삭제</dd></div>
+                    <div><dt>거부할 권리</dt><dd>동의하지 않을 수 있어요. 이 경우 사연을 접수할 수 없어요.</dd></div>
+                  </dl>
+                </details>
+                <label class="check" id="portraitRow"><input type="checkbox" id="agreePortrait"><span>[필수] 영상·사진에 나오는 친구들에게 허락을 받았어요</span></label>
+                <p class="hint">보낸 사연은 방송 시간에 맞춰 편집될 수 있어요.</p>
+                <p class="err" id="err-agree" hidden></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="form-alert" id="formAlert" role="alert" hidden></div>
+          <div class="submit-row">
+            <button class="btn big" type="submit" id="submitBtn">사연 보내기</button>
+            <p class="hint">큰 영상은 와이파이에서 올리는 게 빨라요. 올리는 동안 화면을 켜 두세요.</p>
+          </div>
+        </form>
+
+        <div class="done" id="doneBox" hidden tabindex="-1">
+          <h3>사연이 접수됐어요!</h3>
+          <div class="ticket"><small>접수번호</small><span class="receipt" id="receipt">BR-0000-0000</span></div>
+          <p>접수번호를 캡처해 두세요. 고칠 내용이 있으면 2층 창의체험부에 접수번호를 알려 주면 돼요.</p>
+          <p class="hint" id="doneDemo" hidden>미리보기 화면이라 실제로 접수되지는 않았어요.</p>
+          <button class="btn ghost" type="button" id="againBtn">사연 하나 더 보내기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="faqTitle">
+  <div class="wrap">
+    <div class="sec-head"><h2 class="sec-title" id="faqTitle">궁금해요</h2></div>
+    <div class="faq-grid">
+      <details class="qa"><summary>모든 사연이 방송되나요?</summary><p>학생회가 모두 읽어 보고 골라요. 방송 시간에 맞춰 내용이 편집될 수 있어요.</p></details>
+      <details class="qa"><summary>방송에서 이름이 불리는 게 싫어요.</summary><p>'익명으로 해 주세요'를 고르면 이름 대신 닉네임이나 익명으로 소개해요. 학번과 이름은 확인과 상품 전달에만 써요.</p></details>
+      <details class="qa"><summary>영상 파일이 너무 커요.</summary><p>파일 하나에 1GB까지 올릴 수 있어요. 2~3분 영상은 보통 이보다 작아요. 넘는다면 카메라 설정을 1080p로 바꿔서 다시 찍어 주세요.</p></details>
+      <details class="qa"><summary>올리다가 멈췄어요.</summary><p>'이어서 다시 시도'를 누르면 이미 올라간 부분부터 이어서 올라가요. 와이파이에서 올리면 더 안정적이에요.</p></details>
+      <details class="qa"><summary>팀으로 참여하려면요?</summary><p>대표 한 명이 보내면서 '팀'을 고르고, 팀원 전원의 학번과 이름을 적어 주세요.</p></details>
+      <details class="qa"><summary>보낸 사연을 고치고 싶어요.</summary><p>2층 창의체험부에 접수번호를 알려 주세요. 새로 다시 보내도 돼요.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap" style="display:grid;gap:14px;justify-items:center">
+    <p class="notice">★ 보낸 사연은 방송 시간상 편집될 수 있으며, 사연 및 초상권 활용에 동의한 것으로 간주합니다 ★</p>
+    <p class="org"><span>학생독립운동 기념의 날</span><i aria-hidden="true"></i><span>목운중학교 16기 학생회</span></p>
+    <small>문의 2층 창의체험부</small>
+  </div>
+</footer>
+</div>
+
+<div class="overlay light" id="overlay" role="dialog" aria-modal="true" aria-labelledby="ovTitle" hidden>
+  <div class="ov-card">
+    <div class="ov-top"><h2 class="ov-title" id="ovTitle">사연 보내는 중</h2><span class="ov-pct" id="ovPct">0%</span></div>
+    <div class="bar" role="progressbar" aria-labelledby="ovTitle" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="ovBar"><i id="ovFill"></i></div>
+    <p class="ov-line" id="ovLine">준비하는 중이에요</p>
+    <p class="ov-sub" id="ovSub"></p>
+    <p class="ov-note" id="ovNote">다 올라갈 때까지 화면을 켜 두고 이 창을 닫지 마세요.</p>
+    <p class="ov-err" id="ovErr" role="alert" hidden></p>
+    <div class="ov-actions">
+      <button class="btn ghost" type="button" id="ovCancel">그만두기</button>
+      <button class="btn" type="button" id="ovRetry" hidden>이어서 다시 시도</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ===== 설정 =====
+ * SCRIPT_URL에 Apps Script 웹 앱 주소(…/exec)를 붙여 넣으면 실제 접수가 켜져요.
+ * 비워 두면 미리보기 모드로 동작해요(아무것도 전송되지 않음).
+ */
+const CONFIG = {
+  SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbzfphCzthBBzaJY16pDe-OfSfavJHPgNBWwd65bnMs6eXs6kwYEKPTpqLdLts3bgyDw/exec',
+  OPEN_AT: '2026-10-19T00:00:00+09:00',
+  CLOSE_AT: '2026-11-03T23:59:59+09:00',
+  MAX_FILE_MB: 1024,
+  MAX_FILES: 5,
+  CHUNK_MB: 8
+};
+
+(function () {
+  'use strict';
+  var $ = function (s) { return document.querySelector(s); };
+  var $$ = function (s) { return Array.prototype.slice.call(document.querySelectorAll(s)); };
+  var DEMO = !CONFIG.SCRIPT_URL;
+  var MB = 1024 * 1024;
+  var MAX_FILE = CONFIG.MAX_FILE_MB * MB;
+  var CHUNK = CONFIG.CHUNK_MB * MB;
+  var OPEN = new Date(CONFIG.OPEN_AT).getTime();
+  var CLOSE = new Date(CONFIG.CLOSE_AT).getTime();
+  var TEST = false;
+  try { TEST = new URLSearchParams(location.search).has('test') || location.hash === '#test'; } catch (e) {}
+  var DRAFT_KEY = 'borafm-draft-v1';
+  var FILE_FORMATS = ['영상', '음성 녹음', '손글씨'];
+
+  var form = $('#sendForm');
+  var picked = [];
+  var session = { folderId: null, token: null };
+  var sendKey = null;
+  var busy = false;
+  var cancelled = false;
+  var currentCtrl = null;
+  var wakeLock = null;
+
+  function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
+  function uid() {
+    var a = '';
+    var chars = 'abcdefghijkmnpqrstuvwxyz23456789';
+    for (var i = 0; i < 20; i++) a += chars.charAt(Math.floor(Math.random() * chars.length));
+    return a;
+  }
+  function kstDay(t) { return Math.floor((t + 9 * 3600000) / 86400000); }
+  function fmtSize(n) {
+    if (n >= 1024 * MB) return (n / (1024 * MB)).toFixed(2) + 'GB';
+    if (n >= MB) return (n / MB).toFixed(1) + 'MB';
+    return Math.max(1, Math.round(n / 1024)) + 'KB';
+  }
+  function mkErr(code, retryable, message) {
+    var e = new Error(message || code);
+    e.code = code; e.retryable = !!retryable; e.userMessage = message || '';
+    return e;
+  }
+
+  /* ---------- 접수 기간 ---------- */
+  function phase(now) { return now < OPEN ? 'before' : (now > CLOSE ? 'closed' : 'open'); }
+  function updateStatus() {
+    var now = Date.now();
+    var p = phase(now);
+    var chip = $('#stateChip');
+    chip.dataset.phase = p;
+    if (p === 'before') chip.textContent = '접수 시작까지 D-' + (kstDay(OPEN) - kstDay(now));
+    else if (p === 'open') { var d = kstDay(CLOSE) - kstDay(now); chip.textContent = d <= 0 ? '오늘 마감! D-DAY' : '마감까지 D-' + d; }
+    else chip.textContent = '접수 마감 · 11.18 방송에서 만나요';
+
+    var allow = DEMO || TEST || p === 'open';
+    $('#demoNote').hidden = !DEMO;
+    if (!$('#doneBox').hidden) return;
+    form.hidden = !allow;
+    $('#closedBox').hidden = allow;
+    if (!allow) {
+      if (p === 'before') { $('#closedTitle').textContent = '10월 19일(월)부터 보낼 수 있어요'; $('#closedText').textContent = '조금만 기다려 주세요. 사연 미리 생각해 두기!'; }
+      else { $('#closedTitle').textContent = '접수가 마감됐어요'; $('#closedText').textContent = '11월 18일 보라FM 방송에서 만나요!'; }
+    }
+  }
+
+  /* ---------- 폼 상태 ---------- */
+  function radioVal(name) { var el = form.querySelector('input[name="' + name + '"]:checked'); return el ? el.value : ''; }
+  function val(id) { var el = document.getElementById(id); return el ? el.value.trim() : ''; }
+  function readForm() {
+    return {
+      mode: radioVal('mode'), role: radioVal('role'),
+      studentId: val('studentId'), name: val('name'), members: val('members'),
+      category: radioVal('category'),
+      formats: $$('input[name="formats"]:checked').map(function (i) { return i.value; }),
+      title: val('title'), story: val('story'), song: val('song'),
+      onAir: radioVal('onAir'), nickname: val('nickname'),
+      agreePrivacy: $('#agreePrivacy').checked, agreePortrait: $('#agreePortrait').checked
+    };
+  }
+  function needsFiles(d) { return d.formats.some(function (f) { return FILE_FORMATS.indexOf(f) >= 0; }); }
+  function storyRequired(d) { return d.formats.indexOf('글') >= 0 || (picked.length === 0 && !needsFiles(d)); }
+
+  function syncUI() {
+    var d = readForm();
+    $('#membersField').hidden = d.mode !== '팀';
+    $('#sidField').hidden = d.role === '선생님';
+    $('#nameLabel').textContent = d.mode === '팀' ? '대표자 이름' : '이름';
+    $('#nickField').hidden = d.onAir !== '익명';
+    var req = storyRequired(d);
+    $('#storyMust').hidden = !req;
+    $('#storyOpt').hidden = req;
+    $('#storyLabel').textContent = req ? '사연' : '사연 소개';
+    $('#portraitRow').hidden = picked.length === 0;
+    $('#dropReq').hidden = !needsFiles(d);
+    var n = $('#story').value.length;
+    $('#storyCount').textContent = n + '자';
+    var over = n > 600;
+    $('#storyCounter').classList.toggle('over', over);
+    $('#storyGuide').textContent = over ? '조금 길어요. 500자 내외로 줄여 주면 좋아요' : '글 사연은 500자 내외가 좋아요';
+  }
+
+  /* ---------- 검사 ---------- */
+  var ERR_TARGET = {
+    studentId: 'studentId', name: 'name', members: 'members', category: 'categoryChips',
+    formats: 'formatChips', story: 'story', files: 'drop', onAir: 'onAirChips', agree: 'agreePrivacy'
+  };
+  function validate(d) {
+    var errs = {};
+    if (!d.name) errs.name = '이름을 적어 주세요.';
+    if (d.role === '학생') {
+      if (!d.studentId) errs.studentId = '학번을 적어 주세요.';
+      else if (!/^\d{4,6}$/.test(d.studentId)) errs.studentId = '학번은 숫자로만 적어 주세요. 예: 30215';
+    }
+    if (d.mode === '팀' && !d.members) errs.members = '팀원 전원의 학번과 이름을 적어 주세요.';
+    if (!d.category) errs.category = '사연 종류를 하나 골라 주세요.';
+    if (!d.formats.length) errs.formats = '보내는 형식을 하나 이상 골라 주세요.';
+    if (needsFiles(d) && picked.length === 0) errs.files = '영상·음성·손글씨 사연은 파일을 올려 주세요.';
+    if (storyRequired(d) && !d.story) errs.story = d.formats.indexOf('글') >= 0 ? '사연 내용을 적어 주세요.' : '사연 내용을 적거나 파일을 올려 주세요.';
+    if (!d.onAir) errs.onAir = '방송에서 이름을 불러도 되는지 골라 주세요.';
+    if (!d.agreePrivacy) errs.agree = '개인정보 수집·이용에 동의해야 보낼 수 있어요.';
+    else if (picked.length > 0 && !d.agreePortrait) errs.agree = '영상·사진 속 친구들에게 허락을 받았는지 확인해 주세요.';
+    return errs;
+  }
+  function showErrors(errs) {
+    Object.keys(ERR_TARGET).forEach(function (k) {
+      var p = document.getElementById('err-' + k);
+      var t = document.getElementById(ERR_TARGET[k]);
+      if (p) { p.hidden = !errs[k]; p.textContent = errs[k] || ''; }
+      if (t) { if (errs[k]) t.setAttribute('aria-invalid', 'true'); else t.removeAttribute('aria-invalid'); }
+    });
+    var keys = Object.keys(errs);
+    var alertBox = $('#formAlert');
+    alertBox.hidden = keys.length === 0;
+    alertBox.textContent = keys.length ? '빠진 내용이 ' + keys.length + '군데 있어요. 빨간 글씨를 확인해 주세요.' : '';
+    if (keys.length) {
+      var order = ['studentId', 'name', 'members', 'category', 'formats', 'story', 'files', 'onAir', 'agree'];
+      for (var i = 0; i < order.length; i++) {
+        if (errs[order[i]]) {
+          var el = document.getElementById(ERR_TARGET[order[i]]);
+          if (el) {
+            el.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
+            var focusable = el.matches('input,textarea') ? el : el.querySelector('input');
+            if (focusable) setTimeout(function () { try { focusable.focus({ preventScroll: true }); } catch (e) {} }, 300);
+          }
+          break;
+        }
+      }
+    }
+  }
+  var touched = false;
+  function revalidate() { if (touched) showErrors(validate(readForm())); }
+
+  /* ---------- 파일 ---------- */
+  function kindOf(f) {
+    var t = (f.type || '').split('/')[0];
+    var n = f.name.toLowerCase();
+    if (t === 'video' || /\.(mov|mp4|m4v|avi|webm|3gp)$/.test(n)) return { label: '영상', color: 'var(--mint)' };
+    if (t === 'audio' || /\.(m4a|mp3|wav|aac|amr|ogg)$/.test(n)) return { label: '음성', color: 'var(--pink)' };
+    if (t === 'image' || /\.(heic|heif|jpg|jpeg|png)$/.test(n)) return { label: '사진', color: 'var(--sky)' };
+    return { label: '파일', color: 'var(--yellow)' };
+  }
+  function addFiles(list) {
+    var msgs = [];
+    Array.prototype.forEach.call(list, function (file) {
+      if (picked.length >= CONFIG.MAX_FILES) { msgs.push('파일은 최대 ' + CONFIG.MAX_FILES + '개까지 올릴 수 있어요.'); return; }
+      if (!file.size) { msgs.push('"' + file.name + '"은(는) 빈 파일이라 뺐어요.'); return; }
+      if (file.size > MAX_FILE) { msgs.push('"' + file.name + '"이(가) ' + fmtSize(file.size) + '라서 너무 커요. 파일 하나에 ' + CONFIG.MAX_FILE_MB / 1024 + 'GB까지 올릴 수 있어요.'); return; }
+      var key = file.name + '|' + file.size + '|' + file.lastModified;
+      if (picked.some(function (p) { return p.key === key; })) return;
+      picked.push({ key: key, file: file, uploadUrl: null, next: 0, fileId: null, fails: 0, resets: 0 });
+    });
+    renderFiles();
+    var errP = $('#err-files');
+    if (msgs.length) { errP.hidden = false; errP.textContent = msgs.filter(function (m, i, a) { return a.indexOf(m) === i; }).join(' '); }
+    else { errP.hidden = true; errP.textContent = ''; }
+    syncUI(); revalidate();
+  }
+  function renderFiles() {
+    var ul = $('#fileList');
+    ul.textContent = '';
+    picked.forEach(function (p, idx) {
+      var li = document.createElement('li');
+      var k = kindOf(p.file);
+      var badge = document.createElement('span');
+      badge.className = 'fkind'; badge.textContent = k.label; badge.style.background = k.color;
+      var info = document.createElement('div');
+      info.style.minWidth = '0';
+      var nm = document.createElement('span');
+      nm.className = 'fname'; nm.style.display = 'block'; nm.textContent = p.file.name;
+      var sz = document.createElement('span');
+      sz.className = 'fsize'; sz.textContent = fmtSize(p.file.size);
+      if (p.fileId) { var ok = document.createElement('span'); ok.className = 'fstate'; ok.textContent = ' · 올라감'; sz.appendChild(ok); }
+      info.appendChild(nm); info.appendChild(sz);
+      var rm = document.createElement('button');
+      rm.type = 'button'; rm.className = 'fremove'; rm.textContent = '×';
+      rm.setAttribute('aria-label', p.file.name + ' 빼기');
+      rm.addEventListener('click', function () { if (busy) return; picked.splice(idx, 1); renderFiles(); syncUI(); revalidate(); });
+      li.appendChild(badge); li.appendChild(info); li.appendChild(rm);
+      ul.appendChild(li);
+    });
+  }
+
+  /* ---------- 서버 통신 ---------- */
+  var RETRYABLE = { busy: 1, server: 1, upload: 1, drive: 1, network: 1, badjson: 1, timeout: 1 };
+  function request(payload) {
+    if (DEMO) return demo(payload);
+    var ctrl = new AbortController();
+    currentCtrl = ctrl;
+    var timer = setTimeout(function () { ctrl.abort(); }, 240000);
+    return fetch(CONFIG.SCRIPT_URL, { method: 'POST', body: JSON.stringify(payload), signal: ctrl.signal, redirect: 'follow' })
+      .then(function (res) {
+        if (!res.ok) throw mkErr(res.status >= 500 || res.status === 429 ? 'server' : 'http' + res.status, res.status >= 500 || res.status === 429);
+        return res.text();
+      }, function () { throw mkErr(cancelled ? 'cancelled' : 'network', !cancelled); })
+      .then(function (txt) {
+        var j;
+        try { j = JSON.parse(txt); } catch (e) { throw mkErr('badjson', true); }
+        if (!j || !j.ok) throw mkErr((j && j.error) || 'server', !!RETRYABLE[(j && j.error) || 'server'], j && j.message);
+        return j;
+      })
+      .finally(function () { clearTimeout(timer); if (currentCtrl === ctrl) currentCtrl = null; });
+  }
+  function call(payload, retries) {
+    if (retries == null) retries = 4;
+    var attempt = 0;
+    function go() {
+      return request(payload).catch(function (err) {
+        if (cancelled) throw mkErr('cancelled', false);
+        if (!err.retryable || attempt >= retries) throw err;
+        attempt++;
+        note('연결이 잠깐 불안정해요. 다시 시도하는 중… (' + attempt + '/' + retries + ')');
+        return sleep(Math.min(20000, 1500 * Math.pow(2, attempt - 1))).then(go);
+      });
+    }
+    return go();
+  }
+  function demo(p) {
+    return sleep(p.action === 'chunk' ? 70 : 450).then(function () {
+      if (cancelled) throw mkErr('cancelled', false);
+      if (p.action === 'start') return { ok: true, folderId: 'demo', token: 'demo' };
+      if (p.action === 'init') return { ok: true, uploadUrl: 'demo' };
+      if (p.action === 'chunk') { var next = p.start + p.len; return next >= p.total ? { ok: true, done: true, fileId: 'demo' + p.start } : { ok: true, done: false, next: next }; }
+      if (p.action === 'status') return { ok: true, done: false, next: 0 };
+      if (p.action === 'submit') {
+        var d = new Date(Date.now() + 9 * 3600000);
+        var mmdd = String(d.getUTCMonth() + 1).padStart(2, '0') + String(d.getUTCDate()).padStart(2, '0');
+        return { ok: true, receipt: 'BR-' + mmdd + '-DEMO' };
+      }
+      return { ok: true };
+    });
+  }
+  function b64(blob) {
+    return new Promise(function (resolve, reject) {
+      var r = new FileReader();
+      r.onload = function () { var s = String(r.result); resolve(s.slice(s.indexOf(',') + 1)); };
+      r.onerror = function () { reject(mkErr('read', false, '파일을 읽지 못했어요. 파일을 빼고 다시 골라 주세요.')); };
+      r.readAsDataURL(blob);
+    });
+  }
+
+  /* ---------- 업로드 ---------- */
+  function totalBytes() { return picked.reduce(function (a, p) { return a + p.file.size; }, 0); }
+  function doneBytes() { return picked.reduce(function (a, p) { return a + (p.fileId ? p.file.size : p.next); }, 0); }
+  function setProgress(stage) {
+    var total = totalBytes();
+    var pct = total ? Math.floor(doneBytes() / total * (stage === 'submit' ? 100 : 97)) : (stage === 'submit' ? 95 : 10);
+    if (stage === 'submit') pct = Math.max(pct, 97);
+    $('#ovPct').textContent = pct + '%';
+    $('#ovFill').style.width = pct + '%';
+    $('#ovBar').setAttribute('aria-valuenow', String(pct));
+    if (total) $('#ovSub').textContent = fmtSize(doneBytes()) + ' / ' + fmtSize(total);
+  }
+  function note(msg) { var n = $('#ovNote'); n.textContent = msg || '다 올라갈 때까지 화면을 켜 두고 이 창을 닫지 마세요.'; }
+
+  function uploadFile(p, idx) {
+    $('#ovLine').textContent = '파일 ' + (idx + 1) + '/' + picked.length + ' · ' + p.file.name;
+    var mime = p.file.type || 'application/octet-stream';
+    var begin = p.uploadUrl ? Promise.resolve() : call({ action: 'init', folderId: session.folderId, token: session.token, name: p.file.name, mime: mime, size: p.file.size })
+      .then(function (r) { p.uploadUrl = r.uploadUrl; p.next = 0; });
+    function restartFile() {
+      p.resets++;
+      if (p.resets > 2) throw mkErr('upload', true);
+      p.uploadUrl = null; p.next = 0;
+      return uploadFile(p, idx);
+    }
+    function step() {
+      if (p.fileId) return Promise.resolve();
+      if (cancelled) return Promise.reject(mkErr('cancelled', false));
+      var start = p.next;
+      var end = Math.min(start + CHUNK, p.file.size);
+      var dataP = DEMO ? Promise.resolve('') : b64(p.file.slice(start, end));
+      return dataP.then(function (data) {
+        return call({ action: 'chunk', uploadUrl: p.uploadUrl, start: start, len: end - start, total: p.file.size, mime: mime, data: data }, 0);
+      }).then(function (r) {
+        p.fails = 0; note('');
+        if (r.done) { p.fileId = r.fileId; p.next = p.file.size; renderFiles(); }
+        else p.next = Math.max(0, Number(r.next) || 0);
+        setProgress('upload');
+        return step();
+      }, function (err) {
+        if (err.code === 'cancelled') throw err;
+        if (err.code === 'expired') return restartFile();
+        if (!err.retryable) throw err;
+        p.fails++;
+        if (p.fails > 8) throw err;
+        note('연결이 잠깐 끊겼어요. 이어서 올리는 중… (' + p.fails + '/8)');
+        return sleep(Math.min(30000, 1500 * Math.pow(2, p.fails - 1)))
+          .then(function () { return call({ action: 'status', uploadUrl: p.uploadUrl, total: p.file.size }, 2); })
+          .then(function (s) {
+            if (s.done) { p.fileId = s.fileId; p.next = p.file.size; renderFiles(); }
+            else p.next = Math.max(0, Number(s.next) || 0);
+            setProgress('upload');
+            return step();
+          }, function (e2) {
+            if (e2.code === 'cancelled') throw e2;
+            if (e2.code === 'expired') return restartFile();
+            return step();
+          });
+      });
+    }
+    return begin.then(step);
+  }
+
+  function payloadOf(d) {
+    return {
+      mode: d.mode, role: d.role, studentId: d.role === '학생' ? d.studentId : '', name: d.name,
+      members: d.mode === '팀' ? d.members : '', category: d.category, formats: d.formats,
+      title: d.title, story: d.story, song: d.song, onAir: d.onAir, nickname: d.onAir === '익명' ? d.nickname : '',
+      agreePrivacy: d.agreePrivacy, agreePortrait: d.agreePortrait
+    };
+  }
+
+  function openOverlay() {
+    $('#overlay').hidden = false;
+    $('#ovErr').hidden = true; $('#ovRetry').hidden = true;
+    $('#ovCancel').textContent = '그만두기';
+    $('#ovTitle').textContent = '사연 보내는 중';
+    note(''); setProgress('upload');
+    $('#ovLine').textContent = '준비하는 중이에요';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeOverlay() { $('#overlay').hidden = true; document.body.style.overflow = ''; }
+  function errorText(err) {
+    if (err.userMessage) return err.userMessage;
+    switch (err.code) {
+      case 'closed': return '접수 기간이 끝나서 보낼 수 없어요.';
+      case 'too_big': return '파일이 너무 커요. 파일 하나에 ' + CONFIG.MAX_FILE_MB / 1024 + 'GB까지 올릴 수 있어요.';
+      case 'too_many': return '파일이 너무 많아요. 최대 ' + CONFIG.MAX_FILES + '개까지 올릴 수 있어요.';
+      case 'setup': return '접수 서버 설정이 아직 끝나지 않았어요. 학생회에 알려 주세요.';
+      case 'read': return '파일을 읽지 못했어요. 파일을 빼고 다시 골라 주세요.';
+      default: return '인터넷이 끊겼거나 접수 서버가 잠깐 바빠요. 와이파이를 확인하고 \'이어서 다시 시도\'를 눌러 주세요. 이미 올라간 부분은 그대로 남아 있어요.';
+    }
+  }
+  function lockWake() { try { if (navigator.wakeLock) navigator.wakeLock.request('screen').then(function (w) { wakeLock = w; }, function () {}); } catch (e) {} }
+  function releaseWake() { try { if (wakeLock) wakeLock.release(); } catch (e) {} wakeLock = null; }
+
+  function runSend() {
+    var d = readForm();
+    busy = true; cancelled = false;
+    picked.forEach(function (p) { p.fails = 0; });
+    $('#submitBtn').disabled = true;
+    openOverlay(); lockWake();
+    var chain = Promise.resolve();
+    if (picked.length && !session.folderId) {
+      chain = chain.then(function () {
+        $('#ovLine').textContent = '파일 올릴 자리를 만드는 중이에요';
+        return call({ action: 'start', key: sendKey, name: d.name, studentId: d.role === '학생' ? d.studentId : '선생님' });
+      }).then(function (r) { session.folderId = r.folderId; session.token = r.token; });
+    }
+    picked.forEach(function (p, i) { chain = chain.then(function () { return uploadFile(p, i); }); });
+    chain = chain.then(function () {
+      $('#ovTitle').textContent = '거의 다 됐어요';
+      $('#ovLine').textContent = '사연을 접수하는 중이에요';
+      setProgress('submit');
+      var body = payloadOf(d);
+      body.action = 'submit'; body.key = sendKey;
+      body.folderId = session.folderId; body.token = session.token;
+      body.files = picked.map(function (p) { return { id: p.fileId, name: p.file.name, size: p.file.size }; });
+      return call(body);
+    }).then(function (r) {
+      finish(r.receipt);
+    }).catch(function (err) {
+      if (err.code === 'cancelled') { closeOverlay(); return; }
+      $('#ovTitle').textContent = '잠깐 멈췄어요';
+      $('#ovErr').hidden = false;
+      $('#ovErr').textContent = errorText(err);
+      var canRetry = err.retryable || err.code === 'network';
+      $('#ovRetry').hidden = !canRetry;
+      $('#ovCancel').textContent = '닫기';
+      if (canRetry) $('#ovRetry').focus(); else $('#ovCancel').focus();
+    }).then(function () {
+      busy = false;
+      $('#submitBtn').disabled = false;
+      releaseWake();
+    });
+  }
+
+  function finish(receipt) {
+    closeOverlay();
+    $('#receipt').textContent = receipt || '';
+    $('#doneDemo').hidden = !DEMO;
+    form.hidden = true;
+    $('#doneBox').hidden = false;
+    $('#doneBox').focus();
+    $('#doneBox').scrollIntoView({ block: 'center' });
+    form.reset();
+    picked = []; renderFiles();
+    session = { folderId: null, token: null }; sendKey = null; touched = false;
+    try { localStorage.removeItem(DRAFT_KEY); } catch (e) {}
+    showErrors({}); syncUI();
+  }
+
+  /* ---------- 임시 저장 ---------- */
+  var DRAFT_FIELDS = ['studentId', 'name', 'members', 'title', 'story', 'song', 'nickname'];
+  var DRAFT_RADIOS = ['mode', 'role', 'category', 'onAir'];
+  var draftTimer = null;
+  function saveDraft() {
+    clearTimeout(draftTimer);
+    draftTimer = setTimeout(function () {
+      var o = {};
+      DRAFT_FIELDS.forEach(function (k) { o[k] = document.getElementById(k).value; });
+      DRAFT_RADIOS.forEach(function (k) { o[k] = radioVal(k); });
+      o.formats = $$('input[name="formats"]:checked').map(function (i) { return i.value; });
+      try { localStorage.setItem(DRAFT_KEY, JSON.stringify(o)); } catch (e) {}
+    }, 400);
+  }
+  function loadDraft() {
+    var o = null;
+    try { o = JSON.parse(localStorage.getItem(DRAFT_KEY) || 'null'); } catch (e) { o = null; }
+    if (!o) return;
+    DRAFT_FIELDS.forEach(function (k) { if (typeof o[k] === 'string') document.getElementById(k).value = o[k]; });
+    DRAFT_RADIOS.forEach(function (k) {
+      if (!o[k]) return;
+      $$('input[name="' + k + '"]').forEach(function (i) { i.checked = i.value === o[k]; });
+    });
+    if (Array.isArray(o.formats)) $$('input[name="formats"]').forEach(function (i) { i.checked = o.formats.indexOf(i.value) >= 0; });
+  }
+
+  /* ---------- 이벤트 ---------- */
+  form.addEventListener('input', function () { syncUI(); saveDraft(); revalidate(); });
+  form.addEventListener('change', function () { syncUI(); saveDraft(); revalidate(); });
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (busy) return;
+    touched = true;
+    var errs = validate(readForm());
+    showErrors(errs);
+    if (Object.keys(errs).length) return;
+    if (!sendKey) sendKey = uid();
+    runSend();
+  });
+  $('#studentId').addEventListener('input', function (e) { var v = e.target.value.replace(/\D/g, ''); if (v !== e.target.value) e.target.value = v; });
+  $('#fileInput').addEventListener('change', function (e) { addFiles(e.target.files); e.target.value = ''; });
+  var drop = $('#drop');
+  ['dragenter', 'dragover'].forEach(function (t) { drop.addEventListener(t, function (e) { e.preventDefault(); drop.classList.add('is-over'); }); });
+  ['dragleave', 'drop'].forEach(function (t) { drop.addEventListener(t, function (e) { e.preventDefault(); drop.classList.remove('is-over'); }); });
+  drop.addEventListener('drop', function (e) { if (e.dataTransfer && e.dataTransfer.files) addFiles(e.dataTransfer.files); });
+  $('#ovCancel').addEventListener('click', function () {
+    if (busy) { cancelled = true; if (currentCtrl) currentCtrl.abort(); }
+    closeOverlay();
+  });
+  $('#ovRetry').addEventListener('click', function () { if (!busy) runSend(); });
+  $('#againBtn').addEventListener('click', function () {
+    $('#doneBox').hidden = true;
+    form.hidden = false;
+    updateStatus();
+    $('#sendForm').scrollIntoView({ block: 'start' });
+  });
+  document.addEventListener('visibilitychange', function () { if (busy && document.visibilityState === 'visible') lockWake(); });
+  window.addEventListener('beforeunload', function (e) { if (busy) { e.preventDefault(); e.returnValue = ''; } });
+
+  loadDraft();
+  syncUI();
+  updateStatus();
+  setInterval(updateStatus, 60000);
+})();
+</script>
+</body>
+</html>
