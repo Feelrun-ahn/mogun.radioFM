@@ -551,7 +551,7 @@ textarea.short{min-height:84px}
             <div class="fields">
               <div class="field">
                 <label class="label" for="who">학번, 이름 <span class="req">필수</span></label>
-                <textarea class="input short" id="who" name="who" rows="2" maxlength="400" placeholder="예: 31601 김목운" aria-describedby="hint-who err-who"></textarea>
+                <textarea class="input short" id="who" name="who" rows="2" maxlength="400" placeholder="예: 31513 이찬민" aria-describedby="hint-who err-who"></textarea>
                 <p class="hint" id="hint-who">팀이면 모든 팀원의 학번과 이름을 적어 주세요. 선생님은 성함만 적어 주세요.</p>
                 <p class="err" id="err-who" hidden></p>
               </div>
@@ -955,20 +955,42 @@ const CONFIG = {
   /* ---------- 업로드 ---------- */
   function totalBytes() { return picked.reduce(function (a, p) { return a + p.file.size; }, 0); }
   function doneBytes() { return picked.reduce(function (a, p) { return a + (p.fileId ? p.file.size : p.next); }, 0); }
-  function setProgress(stage) {
-    var total = totalBytes();
-    var pct = total ? Math.floor(doneBytes() / total * 96) : 10;
-    if (stage === 'submit') pct = 98;
+  /* 진행률: 요청이 끝날 때만 올라가면 멈춘 것처럼 보이니까,
+     요청이 진행되는 동안에도 다음 목표치까지 조금씩 다가가게 함 (목표치는 넘지 않음) */
+  var prog = { shown: 0, floor: 0, ceil: 0, timer: null };
+  function pctOf(bytes) { var T = totalBytes(); return T ? 8 + 80 * Math.min(1, bytes / T) : 0; }
+  function paint() {
+    var pct = Math.max(0, Math.min(100, Math.floor(prog.shown)));
     $('#ovPct').textContent = pct + '%';
     $('#ovFill').style.width = pct + '%';
     $('#ovBar').setAttribute('aria-valuenow', String(pct));
+    var total = totalBytes();
     $('#ovSub').textContent = total ? fmtSize(doneBytes()) + ' / ' + fmtSize(total) : '';
   }
+  function progRange(floor, ceil) {
+    prog.floor = Math.max(prog.floor, floor);
+    prog.ceil = Math.max(prog.floor, ceil);
+    if (prog.shown < prog.floor) prog.shown = prog.floor;
+    paint();
+  }
+  function progTick() {
+    var gap = prog.ceil - prog.shown;
+    if (gap > 0.02) { prog.shown += Math.max(0.15, gap * 0.08); if (prog.shown > prog.ceil) prog.shown = prog.ceil; paint(); }
+  }
+  function progStart() {
+    clearInterval(prog.timer);
+    var base = doneBytes() > 0 ? pctOf(doneBytes()) : 0;
+    prog.shown = base; prog.floor = base; prog.ceil = base;
+    prog.timer = setInterval(progTick, 100);
+    paint();
+  }
+  function progStop() { clearInterval(prog.timer); prog.timer = null; }
   function note(msg) { $('#ovNote').textContent = msg || '다 올라갈 때까지 화면을 켜 두고 이 창을 닫지 마세요.'; }
 
   function uploadFile(p, idx) {
     $('#ovLine').textContent = '파일 ' + (idx + 1) + '/' + picked.length + ' · ' + p.file.name;
     var mime = p.file.type || 'application/octet-stream';
+    if (!p.uploadUrl) progRange(pctOf(doneBytes()), pctOf(doneBytes() + Math.min(CHUNK, p.file.size) * 0.25));
     var begin = p.uploadUrl ? Promise.resolve() : call({ action: 'init', folderId: session.folderId, token: session.token, name: p.file.name, mime: mime, size: p.file.size })
       .then(function (r) { p.uploadUrl = r.uploadUrl; p.next = 0; });
     function restartFile() {
@@ -981,6 +1003,7 @@ const CONFIG = {
       if (p.fileId) return Promise.resolve();
       if (cancelled) return Promise.reject(mkErr('cancelled', false));
       var start = p.next, end = Math.min(start + CHUNK, p.file.size);
+      progRange(pctOf(doneBytes()), pctOf(doneBytes() + (end - start)) - 0.5);
       var dataP = DEMO ? Promise.resolve('') : b64(p.file.slice(start, end));
       return dataP.then(function (data) {
         return call({ action: 'chunk', uploadUrl: p.uploadUrl, start: start, len: end - start, total: p.file.size, mime: mime, data: data }, 0);
@@ -988,7 +1011,7 @@ const CONFIG = {
         p.fails = 0; note('');
         if (r.done) { p.fileId = r.fileId; p.next = p.file.size; renderFiles(); }
         else p.next = Math.max(0, Number(r.next) || 0);
-        setProgress('upload');
+        progRange(pctOf(doneBytes()), pctOf(doneBytes()));
         return step();
       }, function (err) {
         if (err.code === 'cancelled') throw err;
@@ -1002,7 +1025,7 @@ const CONFIG = {
           .then(function (s) {
             if (s.done) { p.fileId = s.fileId; p.next = p.file.size; renderFiles(); }
             else p.next = Math.max(0, Number(s.next) || 0);
-            setProgress('upload');
+            progRange(pctOf(doneBytes()), pctOf(doneBytes()));
             return step();
           }, function (e2) {
             if (e2.code === 'cancelled') throw e2;
@@ -1020,10 +1043,10 @@ const CONFIG = {
     $('#ovCancel').textContent = '그만두기';
     $('#ovTitle').textContent = '사연 보내는 중';
     $('#ovLine').textContent = '준비하는 중이에요';
-    note(''); setProgress('upload');
+    note(''); progStart();
     document.body.style.overflow = 'hidden';
   }
-  function closeOverlay() { $('#overlay').hidden = true; document.body.style.overflow = ''; }
+  function closeOverlay() { progStop(); $('#overlay').hidden = true; document.body.style.overflow = ''; }
   function errorText(err) {
     if (err.userMessage) return err.userMessage;
     switch (err.code) {
@@ -1048,6 +1071,7 @@ const CONFIG = {
     if (picked.length && !session.folderId) {
       chain = chain.then(function () {
         $('#ovLine').textContent = '파일 올릴 자리를 만드는 중이에요';
+        progRange(0, 7);
         return call({ action: 'start', key: sendKey, who: d.who });
       }).then(function (r) { session.folderId = r.folderId; session.token = r.token; });
     }
@@ -1055,7 +1079,7 @@ const CONFIG = {
     chain = chain.then(function () {
       $('#ovTitle').textContent = '거의 다 됐어요';
       $('#ovLine').textContent = '사연을 접수하는 중이에요';
-      setProgress('submit');
+      progRange(picked.length ? 88 : 3, 97);
       return call({
         action: 'submit', key: sendKey, agree: agreed === true,
         who: d.who, anon: d.anon, story: d.story, song: d.song,
@@ -1063,8 +1087,12 @@ const CONFIG = {
         files: picked.map(function (p) { return { id: p.fileId, name: p.file.name, size: p.file.size }; })
       });
     }).then(function (r) {
-      finish(r.receipt);
+      progStop(); prog.shown = 100; paint();
+      $('#ovTitle').textContent = '접수 완료!';
+      $('#ovLine').textContent = '사연이 잘 도착했어요';
+      return sleep(600).then(function () { finish(r.receipt); });
     }).catch(function (err) {
+      progStop();
       if (err.code === 'cancelled') { closeOverlay(); return; }
       $('#ovTitle').textContent = '잠깐 멈췄어요';
       $('#ovErr').hidden = false;
